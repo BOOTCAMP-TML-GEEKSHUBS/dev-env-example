@@ -1,0 +1,17 @@
+services:
+  frontend: 
+    build:
+      context: ../../builds/angular/.
+  auth-service:
+    build:
+      context: ../../builds/nestjs/.
+  customer-service:
+    build:
+      context: ../../builds/nestjs/.
+  invoices-service:
+    build:
+      context: ../../builds/nestjs/.
+  mongo:
+    image: mongo
+    build:
+      context: ../../builds/mongo/.
