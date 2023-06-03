@@ -1,0 +1,23 @@
+services:
+  frontend: 
+    working_dir: /app
+    command: ["ng", "serve"]
+    build:
+      context: ../../builds/angular/.
+    ports:
+      - 4200:4200
+    volumes: 
+      - ../../src/frontend:/app
+  # auth-service:
+  #   build:
+  #     context: ../../builds/nestjs/.
+  # customer-service:
+  #   build:
+  #     context: ../../builds/nestjs/.
+  # invoices-service:
+  #   build:
+  #     context: ../../builds/nestjs/.
+  # mongo:
+  #   image: mongo
+  #   build:
+  #     context: ../../builds/mongo/.

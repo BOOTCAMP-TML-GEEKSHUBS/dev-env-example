@@ -1,0 +1,14 @@
+services:
+  angular: 
+    working_dir: /app
+    build:
+      context: ../../builds/angular/.
+    volumes:
+      - ../../src:/app
+
+  nest: 
+    working_dir: /app
+    build:
+      context: ../../builds/nestjs/.
+    volumes:
+      - ../../src:/app
